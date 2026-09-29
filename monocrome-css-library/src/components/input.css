@@ -1,6 +1,7 @@
 .mc input { 
     font-size: 1rem;
-    border: 2px solid black;
+    border: 2px solid var(--md-color-black);
+    color:  var(--md-color-white);
     border-radius: 5px;
 }
 

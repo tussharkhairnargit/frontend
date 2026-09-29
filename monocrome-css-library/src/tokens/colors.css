@@ -1,5 +1,5 @@
 :root{
-  --mc-color-white:#ffffff;
+  --mc-color-white:#fff;
   --mc-color-gray-50: #f9fafb;
   --mc-color-gray-100: #f3f4f6;
   --mc-color-gray-200: #e5e7eb;
@@ -10,17 +10,11 @@
   --mc-color-gray-700: #374151;
   --mc-color-gray-800: #1f2937;
   --mc-color-gray-900: #111827;
-  --mc-color-black: #000000;
-}
+  --mc-color-black: #000;
 
-:root {
-  /* ================================
-     Semantic Colors
-     ================================ */
-
-
-  --mc-color-background: #ffffff;
- --mc-color-border: var(---mc-color-gray-900);
+  /* Semantic Colors */
+  --mc-color-background: #fff;
+ --mc-color-border: var(--mc-color-gray-900);
  --mc-color-text: var(--mc-color-black);
  
 
