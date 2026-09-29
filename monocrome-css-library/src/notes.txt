@@ -78,3 +78,34 @@ then verify
 npx playwright test --list
 Then 
 npx playwright test --project=firefox --ui
+
+
+npm package 
+  "files": [
+    "dist"
+  ],
+  "style": "dist/mycss.css",
+  "exports": {
+    ".": {
+      "style": "./dist/mycss.css",
+      "default": "./dist/mycss.css"
+    },
+    "./min": "./dist/mycss.min.css",
+    "./components/*": "./dist/components/*"
+  },
+
+Test the package locally : `npm pack` or npm pack --pack-destination build
+
+test before commit or publish
+npm lint
+npm run build
+npm pack --dry-run
+
+For local package in tgz (--pack-destination build)
+  `npm install ../grayscale/build/grayscale-css-1.0.0.tgz`
+Then:
+<link rel="stylesheet" href="node_modules/grayscale-css/build/grayscale-css.min.css">
+
+For a public package:
+npm login
+npm publish --access public
