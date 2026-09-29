@@ -34,6 +34,7 @@ Browser testing
 npm install -D @playwright/test
 npx playwright install
 Playwright downloading the specific browser binaries it needs to run end-to-end automation and testing on your Windows machine.
+Playwright itself is primarily a browser automation tool and does not directly automate real mobile Safari/Chrome like a native-device testing platform.
 
 You executed the Playwright installation CLI. By default, Playwright does not use the standard browsers installed on your computer (like your everyday Chrome or Firefox). Instead, it downloads specific, stripped-down versions of browsers that match its framework version exactly to ensure your automation tests run reliably and deterministically.
 
@@ -50,3 +51,30 @@ css/
 │       └── button.spec.ts
 ├── playwright.config.ts
 └── package.json
+
+Run it
+First build your CSS:
+    npm run build
+Then:
+    npx playwright test
+    npx playwright test --ui //Interactive UI
+    
+    devices - chromium , webkit , firefox {--project={device}}
+    npx playwright test --project=chromium
+    or
+    npx playwright test --project=webkit
+    or
+    npx playwright test --project=firefox
+  
+
+    For debugging:
+        npx playwright test --debug  // shame as chrome debugging
+        or
+        npx playwright test --headed  // auto execution in browser 
+
+Install device
+npx playwright install firefox            
+then verify 
+npx playwright test --list
+Then 
+npx playwright test --project=firefox --ui
