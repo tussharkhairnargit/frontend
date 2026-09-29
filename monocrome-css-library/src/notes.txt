@@ -28,3 +28,25 @@ npm add -D stylelint stylelint-config-standard
 script: {
   "lint":"npx stylelint src/**/*.css" 
 }
+
+
+Browser testing
+npm install -D @playwright/test
+npx playwright install
+Playwright downloading the specific browser binaries it needs to run end-to-end automation and testing on your Windows machine.
+
+You executed the Playwright installation CLI. By default, Playwright does not use the standard browsers installed on your computer (like your everyday Chrome or Firefox). Instead, it downloads specific, stripped-down versions of browsers that match its framework version exactly to ensure your automation tests run reliably and deterministically.
+
+npm install -D http-server
+
+folder structure
+css/
+├── src/
+├── dist/
+├── tests/
+│   ├── fixtures/
+│   │   └── index.html
+│   └── browser/
+│       └── button.spec.ts
+├── playwright.config.ts
+└── package.json
