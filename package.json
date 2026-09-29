@@ -1,0 +1,18 @@
+{
+  "name": "monocrome-scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+
+   "scripts": {
+  "build:expanded": "npx esbuild src/index.css --bundle --outfile=dist/library.css",
+  "build:minified": "npx esbuild src/index.css --bundle --minify --outfile=dist/library.min.css",
+  "build": "npm run build:expanded && npm run build:minified"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+ 
+}

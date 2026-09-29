@@ -1,0 +1,11 @@
+.mc input { 
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.mc input.rounded { 
+   border-radius: 25px;
+   padding: 5px 20px;
+   height: 30px; 
+}

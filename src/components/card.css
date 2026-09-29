@@ -1,0 +1,16 @@
+@import "../tokens/colors.css";
+
+.card {
+    padding: 20px;
+    background-color:  var(--mc-color-white);;
+    color: var(--mc-color-black);
+    border-radius: 5px solid var(--mc-color-black);
+    min-height: 100px;
+    min-width: 100px
+}
+
+.card.dark {
+    background-color: var(--mc-color-black);
+    color:var(--mc-color-white);;
+}
+

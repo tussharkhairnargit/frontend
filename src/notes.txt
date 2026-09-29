@@ -1,0 +1,18 @@
+While tools like esbuild just strip whitespace, Lightning CSS performs advanced engineering optimizations:
+Lightning CSS is an exceptional choice for building a CSS-only library. Written in Rust
+
+npm install --save-dev lightningcss-cli
+"scripts": {
+  "build:expanded": "npx lightningcss --bundle src/index.css -o dist/library.css --targets '>= 0.25%, not dead'",
+  "build:minified": "npx lightningcss --bundle --minify src/index.css -o dist/library.min.css --targets '>= 0.25%, not dead'",
+  "build": "npm run build:expanded && npm run build:minified"
+}
+
+
+npm install esbuild --save-dev
+"scripts": {
+  "build:expanded": "npx esbuild src/index.css --bundle --outfile=dist/library.css",
+  "build:minified": "npx esbuild src/index.css --bundle --minify --outfile=dist/library.min.css",
+  "build": "npm run build:expanded && npm run build:minified"
+  "clean": "rm -rf rx dist"
+}

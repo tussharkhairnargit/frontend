@@ -1,0 +1,14 @@
+button.mc.btn {
+     border-radius: 5px;
+     border-width: 2px;
+     padding :10px 20px;
+     cursor: pointer;
+}
+
+button.mc.btn.rounded {
+     border-radius: 20px;
+}
+
+button.mc.btn.rounded {
+     border-radius: 20px;
+}
