@@ -21,8 +21,7 @@
     "dev:watch": "lightningcss --bundle --watch src/index.css -o build/grayscale.css",
     "dev:serve": "http-server build",
     "lint": "stylelint src/**/*.css",
-     "pack:local": "npm pack --pack-destination build"
-
+    "pack:local": "npm pack --pack-destination build"
   },
   "xscripts": {
     "note": " only one script can be present. remove x to apply below scripts",
@@ -32,6 +31,7 @@
     "esbuild": "npm run esbuild:expanded && npm run esbuild:minified"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.63.0",
     "esbuild": "^0.28.2",
     "http-server": "^14.1.1",

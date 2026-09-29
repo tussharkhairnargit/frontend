@@ -109,3 +109,36 @@ Then:
 For a public package:
 npm login
 npm publish --access public
+
+
+Accessibility (A11y)
+axe-core + Playwright is a good production setup
+
+Important 
+axe-core doesn't prove that your CSS is completely accessible.
+It catches automatically detectable issues.
+
+Accessibility means
+├── Keyboard
+│   └── Can I use it without a mouse?
+├── Visual
+│   ├── Is text readable?
+│   ├── Is contrast sufficient?
+│   └── Is focus visible?
+├── Screen reader
+│   └── Can assistive technology understand it?
+├── Motor
+│   └── Are controls easy to interact with?
+└── Motion
+    └── Can animations be reduced/disabled?
+
+npm packages --
+  `npm install -D @axe-core/playwright`
+
+Folder structure
+tests/
+└── accessibility/
+    └── button.a11y.spec.ts
+
+based above folder structure command will be -
+` npx playwright test tests/accessibility`
