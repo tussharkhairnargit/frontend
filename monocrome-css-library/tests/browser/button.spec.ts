@@ -25,3 +25,10 @@ test('button states', async ({ page }) => {
 
   await expect(button).toBeFocused();
 });
+
+test('Take ScreenShot', async ({ page }) => {
+
+ await page.goto('/tests/fixtures/index.html');
+ const button = page.locator('.mc.btn');
+    await expect(page.locator('.mc.btn')).toHaveScreenshot();
+});
