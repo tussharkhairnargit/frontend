@@ -5,14 +5,22 @@
   "main": "index.js",
   "author": "",
   "license": "ISC",
-
-   "scripts": {
-  "build:expanded": "npx esbuild src/index.css --bundle --outfile=dist/library.css",
-  "build:minified": "npx esbuild src/index.css --bundle --minify --outfile=dist/library.min.css",
-  "build": "npm run build:expanded && npm run build:minified"
+"scripts": {
+   "// --- Lightning CSS : Build Tasks --- //": "alternative of comment",
+    "build:expanded": "npx lightningcss --bundle src/index.css -o build/library.css",
+    "build:minified": "npx lightningcss --bundle --minify src/index.css -o build/library.min.css",
+    "build": "npm run build:expanded && npm run build:minified",
+    "dev:watch": "npx lightningcss --bundle --watch src/index.css -o build/library.css",
+    "dev:serve": "serve build"
+},
+"xscripts": {
+  "note":" only one script can be present. remove x to apply below scripts",
+   "// --- esbuild Tasks --- //": "While tools like esbuild just strip whitespace, Lightning CSS performs advanced engineering optimizations",
+  "esbuild:expanded": "npx esbuild src/index.css --bundle --outfile=dist/library.css",
+  "esbuild:minified": "npx esbuild src/index.css --bundle --minify --outfile=dist/library.min.css",
+  "esbuild": "npm run esbuild:expanded && npm run esbuild:minified"
   },
   "devDependencies": {
     "esbuild": "^0.28.2"
   }
- 
 }
